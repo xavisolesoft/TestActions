@@ -14,6 +14,6 @@ jobs:
       - name: RAM MB
         run: free --mega
       - name: Setup credentials to access private repositories
-        run: git config --global user.name "${GIT_USERNAME}" && git config --global user.password "${GIT_PASSWORD}"
+        run: git config --global user.name "xavisolesoft" && git config --global user.password ${{ secrets.PERSONAL_ACCESS_TOKEN }}
       - name: Build CARLA
         run: git clone -b ue5-dev https://github.com/carla-simulator/carla.git CarlaUE5 && cd CarlaUE5 && bash -x Setup.sh
