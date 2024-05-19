@@ -12,4 +12,4 @@ jobs:
       - name: Disk Space
         run: df -h
       - name: RAM MB
-        run: free -m
+        run: free --mega
