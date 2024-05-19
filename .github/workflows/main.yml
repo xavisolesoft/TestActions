@@ -5,6 +5,9 @@ jobs:
     runs-on: ubuntu-latest
     name: A job to say hello
     steps:
-      # Use the output from the `hello` step
-      - name: Get the output time
-        run: echo "The time was ${{ steps.hello.outputs.time }}"
+      - name: CPU Model
+        run: cat /proc/cpuinfo  | grep 'name'| uniq
+      - name: CPU Cores
+        run: cat /proc/cpuinfo  | grep process| wc -l
+      - name: Disk Space
+        run: df -h
