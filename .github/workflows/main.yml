@@ -13,6 +13,8 @@ jobs:
         run: df -h
       - name: RAM MB
         run: free --mega
+      - name: Setup credentials to access private repositories
+        run: git config --global user.name xavisolesoft && git config --global user.password ${{ secrets.GITHUB_TOKEN }}
       - name: Build CARLA
         run: git clone -b ue5-dev https://github.com/carla-simulator/carla.git CarlaUE5 && cd CarlaUE5 && bash -x Setup.sh
         env:
