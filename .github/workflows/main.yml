@@ -11,3 +11,5 @@ jobs:
         run: cat /proc/cpuinfo  | grep process| wc -l
       - name: Disk Space
         run: df -h
+      - name: RAM MB
+        run: free -m
