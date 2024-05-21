@@ -14,6 +14,9 @@ jobs:
       - name: RAM MB
         run: free --mega
       - name: Clone Unreal Engine 5
-        run: git clone --depth=1 -b ue5-dev-carla https://github.com/CarlaUnreal/UnrealEngine.git UnrealEngine5_carla_test
+        run: |
+          git config --global user.email xavisolesoft@gmail.com 
+          git config --global user.name xavisolesoft
+          git config --global url.https://${{ secrets.PAT }}@github.com/.insteadOf https://github.com/
       - name: LS
         run: ls -la
