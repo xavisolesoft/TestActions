@@ -13,8 +13,7 @@ jobs:
         run: df -h
       - name: RAM MB
         run: free --mega
-      - uses: actions/checkout@v3  # v3 is the latest version
-        with:
-          repository: CarlaUnreal/UnrealEngine
+      - name: Download ZIP file
+        run: curl -L https://github.com/CarlaUnreal/UnrealEngine/archive/refs/heads/carla.zip -o UnrealEngine5.zip
       - name: LS
         run: ls
