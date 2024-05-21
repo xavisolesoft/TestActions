@@ -14,6 +14,6 @@ jobs:
       - name: RAM MB
         run: free --mega
       - name: Download ZIP file
-        run: curl -L https://github.com/CarlaUnreal/UnrealEngine/archive/refs/heads/carla.zip -o UnrealEngine5.zip
+        run: curl --retry 5 --retry-max-time 120 -L -o UnrealEngine5.zip https://github.com/CarlaUnreal/UnrealEngine/archive/refs/heads/carla.zip
       - name: LS
         run: ls -la
