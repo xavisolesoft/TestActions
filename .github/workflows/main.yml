@@ -13,8 +13,6 @@ jobs:
         run: df -h
       - name: RAM MB
         run: free --mega
-      - name: Test git LFS
-        run: git-lfs
       - name: Download ZIP file
         run: curl --retry 5 --retry-max-time 120 -L -o UnrealEngine5.zip https://github.com/CarlaUnreal/UnrealEngine/archive/refs/heads/carla.zip
       - name: LS
