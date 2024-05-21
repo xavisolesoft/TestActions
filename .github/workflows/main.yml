@@ -16,4 +16,4 @@ jobs:
       - name: Download ZIP file
         run: curl -L https://github.com/CarlaUnreal/UnrealEngine/archive/refs/heads/carla.zip -o UnrealEngine5.zip
       - name: LS
-        run: ls
+        run: ls -la
